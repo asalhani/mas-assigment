@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body,
 html {
     font-family: theSans, sans-serif;
@@ -11,12 +15,19 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-
+.wrapper {
+    padding: 0;
+}
 img {
     width: auto;
     height: auto;
 }
-
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-brand {
+    height: auto;
+}
 .navbar-default {
     background-color: rgb(255, 255, 255);
     border: rgb(255, 255, 255);
@@ -26,7 +37,7 @@ img {
 
 .navbar-brand .logo {
     padding: 7px 15px;
-    width: 100px;
+    width: 80px;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -49,10 +60,11 @@ img {
     overflow: hidden;
     margin: 0;
     font-size: 0;
+    padding: 0;
 }
 
 .banner-container h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     position: absolute;
     line-height: 1.1;
     color: #2377c0;
@@ -61,6 +73,7 @@ img {
     width: 30%;
     margin: 0;
     z-index: 10;
+    font-weight: bold;
 }
 
 .banner-container img {
@@ -83,6 +96,7 @@ img {
 
 .banner-description p:nth-of-type(n+2) {
     margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 
@@ -120,6 +134,9 @@ img {
     html {
         font-size: 13px;
     }
+    .navbar-brand .logo {
+        width: 100px;
+    }
     .banner-container img {
         margin-top: -10%;
     }
@@ -129,7 +146,7 @@ img {
         left: 60px;
     }
     .banner-description {
-        padding: 60px 60px;
+        padding: 20px 60px;
     }
     .banner-description p {
         width: calc(100% - 1px);
