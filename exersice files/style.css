@@ -1,0 +1,776 @@
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License:none (public domain) */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+
+
+
+@font-face {
+  font-family: 'TheSans';
+  font-weight: 100;
+  src: url(fonts/TheSansC4s-Light.otf) format('woff');
+}
+@font-face {
+  font-family: 'TheSans';
+  font-weight: 400;
+  src: url(fonts/TheSansC4s-Regular.otf) format('woff');
+}
+@font-face {
+  font-family: 'TheSans';
+  font-weight: 700;
+  src: url(fonts/TheSansC4s-Bold.otf) format('woff');
+}
+@font-face {
+  font-family: 'TheSans';
+  font-weight: 900;
+  src: url(fonts/TheSansC4s-Black.otf) format('woff');
+}
+*{
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: theSans, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body{
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    overflow-x: hidden;
+}
+img { 
+    width: auto;
+    height: auto;
+}
+section {
+    padding: 20px 20px;
+    border: 1px solid rgba(35, 119, 192, 0.3);
+    border-top: none;
+    border-bottom: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+
+a, a:active, a:visited {
+    color: #2377c0;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.bold{
+    font-weight: 700;
+}
+
+header{
+    position: relative;
+    padding: 10px 20px;
+}
+.wub_logo {
+    position: relative;
+    width: 80px;
+    z-index: 1001;
+}
+#menuToggle{
+    position: absolute;
+    display: block;
+    width: 30px;
+    background-color: #808080;
+    height: 2px;
+    color: transparent;
+    top: 40px;
+    right: 30px;
+    z-index: 1001;
+}
+#menuToggle:before,#menuToggle:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    border-top: 2px solid #808080;
+    -webkit-transition: all 450ms;
+    transition: all 450ms;
+}
+#menuToggle:after {
+    border-top: none;
+    border-bottom: 2px solid #808080
+}
+#menu{
+    position: absolute;
+    right: 0;
+    top: -1000%;
+    z-index: 1000;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    -webkit-transition: top 450ms;
+    transition: top 450ms;
+}
+.openMenu #menuToggle{
+    background-color: transparent;
+}
+.openMenu #menuToggle:after{
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -webkit-transform: rotate(-45deg) translate(10px,-12px);
+    -ms-transform: rotate(-45deg) translate(10px,-12px);
+    transform: rotate(-45deg) translate(10px,-12px);
+    width: 25px;
+}
+.openMenu #menuToggle:before{
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: rotate(45deg) translate(3px,-7px);
+    -ms-transform: rotate(45deg) translate(3px,-7px);
+    transform: rotate(45deg) translate(3px,-7px);
+    width: 25px;
+}
+.openMenu #menu{
+    top: 100%;
+}
+#menu ul{
+    width: 100%;
+    text-align: center;
+}
+#menu ul li{
+    margin: 15px 20px;
+    font-size: 1.5em;
+    color: #808080;
+}
+
+#studie{
+    padding: 0;
+}
+.aufmacher{
+    width: 100%;
+}
+
+.aufmacher-container{
+    position: relative;
+    max-height: 60vh;
+    overflow: hidden;
+    margin: 0;
+    font-size: 0;
+}
+.aufmacher-container img{
+    position: relative;
+    opacity: 0.8;
+}
+.aufmacher-container h1{
+    position: absolute;
+    font-size: 3rem;
+    line-height: 1.1;
+    color: #2377c0;
+    bottom: 10px;
+    left: 20px;
+    width: 30%;
+    margin: 0;
+    z-index: 10;
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff,
+                 -2px -2px #ffffff, 2px 2px #ffffff, -2px 2px #ffffff, 2px -2px #ffffff;
+}
+.studi-description{
+    position: relative;
+    background-color: #2377c0;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px 20px;
+}
+.studi-description p {
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin: 0;
+}
+.studi-description p:nth-of-type(n+2){
+    margin-top: 15px;
+}
+.studi-description .btn{
+    display: block;
+    margin: 5px auto 15px;
+}
+
+
+
+#vorteile {
+    padding-bottom: 40px;
+}
+
+#vorteile h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2377c0;
+    margin: 0;
+}
+
+
+.icon {
+    height: 80px;
+    display: block;
+    margin: 30px auto 0;
+}
+
+#vorteile h2{
+    font-size: 1.4rem;
+    color: #b21e22;
+    text-align: center;
+    margin: 10px 0 5px 0;
+}
+#vorteile p {
+    text-align: justify;
+}
+
+#vorteile p span{
+    font-size: 0.8em;
+    display: block;
+    margin-top: 15px;
+}
+
+
+#magazine{
+    padding: 40px 0 0 0;
+}
+#magazine > div{
+    padding: 40px 20px;
+    background-size: 0px;
+    background-repeat: no-repeat;
+}
+
+#magazine > div:nth-child(2n+1){
+    background-color: #d8d8d8;
+}
+#magazine > div img {
+    display: block;
+    margin: 0 auto 20px;
+}
+#magazine h2{
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#magazine p{
+    margin-top: 10px;
+    line-height: 1.5
+}
+
+
+#kontakt {
+    background-color: #2377c0;
+}
+#kontakt h1{
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+#kontakt label {
+    display: block;
+    color: #ffffff;
+    margin-top: 10px;
+}
+#kontakt label:first-of-type{
+    margin-top: 30px;
+}
+#kontakt label[for="datenschutz"] {
+    display: inline-block;
+}
+#kontakt label a{
+    color: inherit;
+}
+#kontakt input:not(.btn):not(#datenschutz) {
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+#kontakt textarea {
+    display: block;
+    width: 100%;
+}
+
+label[for="kontaktChk"]{
+    color: #000000 !important;
+}
+#kontaktChk{
+    display: none !important;
+}
+
+#kontakt form{
+    max-height: 0;
+    -webkit-transition: max-height 900ms;
+    transition: max-height 900ms;
+    overflow: hidden;
+    padding: 0 0 10px 0;
+}
+#kontaktChk:checked + label{
+    display: none;
+}
+#kontaktChk:checked ~ form{
+    max-height: 1000px;
+}
+
+
+footer {
+    padding: 0px 0px 40px;
+}
+footer li {
+    text-align: center;
+    margin: 10px;
+    
+}
+footer li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.btn, .btn {
+    display: block;
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: #ffffff;
+    line-height: 1.0em;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #2377c0;
+    margin: 15px auto 0;
+    cursor: pointer;
+    border: 0;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transition:all 400ms;
+    transition: all 400ms;
+}
+.btn:hover{
+    -webkit-transform: translate(0,-3px);
+    -ms-transform: translate(0,-3px);
+    transform: translate(0,-3px);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+
+.btn.lightBtn{
+    background-color: rgba(255,255,255,0.75);
+    color: #000000;
+}
+
+#message{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 10px auto 0;
+    display: none;
+}
+#message.err {
+    color: #ffc0cb;
+}
+
+#sticky{
+    position: fixed;
+    left: auto;
+    right: -3px;
+    -webkit-transform: translate(100%);
+    -ms-transform: translate(100%);
+    transform: translate(100%);
+    top: 50%;
+    max-width: 240px; 
+    padding: 10px;
+    -webkit-transform-origin: top right;
+    -ms-transform-origin: top right;
+    transform-origin: top right;
+    background: #2377c0;
+    color: #fff;
+    border: 3px #fff solid;
+    border-right: none;
+    border-radius: 0 0 0 10px;
+    z-index: 100;
+    -webkit-transition: -webkit-transform 450ms;
+    transition: transform 450ms;
+}
+#sticky.open{
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.5);
+}
+#sticky .label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 80px;
+    text-align: center;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: translate(-45px, 77px) rotate(-90deg);
+    -ms-transform: translate(-45px, 77px) rotate(-90deg);
+    transform: translate(-45px, 77px) rotate(-90deg);
+    background-color: inherit;
+    padding: 10px;
+    box-shadow: -2px -3px 3px rgba(0,0,0,0.5);
+    border: 3px #fff solid;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+#sticky p{
+    padding: 10px;
+}
+#sticky p:nth-of-type(2){
+    border-top: 1px #fff dotted;
+    border-bottom: 1px #fff dotted;
+}
+#sticky p a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.err {
+    color: #ffc0cb;
+    display: none;
+    margin-top: 5px;
+}
+.wrong + .err {
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    display: block;
+    top: -200%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 100;
+    overflow: auto;
+    padding: 40px 10px;
+    -webkit-animation: hide 450ms linear both;
+    animation: hide 450ms linear both; 
+    pointer-events: none;
+}
+.overlay.wasOpened {
+    top: 0;
+}
+.overlay>div{
+    display: none;
+    position: relative;
+    max-width: 900px;
+    padding: 40px 10px;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+.overlay.open{
+    top: 0;
+    display: block;
+    -webkit-animation: show 450ms linear both;
+    animation: show 450ms linear both;    
+    pointer-events: all;
+}
+@-webkit-keyframes show {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes show {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes hide {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+@keyframes hide {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+.overlay>div.open{
+    display: block;
+}
+a.closeOverlay{
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    z-index: 101;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+.overlay>div h3{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.overlay>div p.bold{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+.overlay>div ul{
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.waitResponse {
+    pointer-events: none;
+    color: gray !important;
+}
+.bodyWaitResponse{
+    cursor: wait;
+}
+
+#toTop {
+    display: block;
+    background-color: rgba(0,0,0,0.4);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 15px;
+    line-height: 0;
+    opacity: 0;
+    -webkit-transition: opacity 450ms;
+    transition: opacity 450ms;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+@media screen and (min-width:500px){
+    .wub_logo {
+        width: 100px;
+    }
+    .closeOverlay{
+        right: 70px;
+    }
+    .overlay, .overlay>div {
+        padding: 40px;
+    }
+    a.closeOverlay{
+        right: 60px;
+    }
+}
+
+@media screen and (min-width:700px){
+    #menuToggle {
+        display: none;
+    }
+    #menu{
+        width: auto;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        box-shadow: none;
+    }
+    #menu ul li{
+        display: inline-block;
+        margin: 5px 20px;
+        font-size: 1.3em;
+    }
+    #menu ul li a {
+        color: #808080;
+    }
+}
+
+@media screen and (min-width:769px){
+    body, html {
+        font-size: 14px;
+    }
+    section {
+        padding: 20px 60px;
+    }
+
+    header{
+        padding: 20px 60px;
+    }
+    .aufmacher-container img{
+        margin-top: -10%;
+    }
+    .aufmacher-container h1{
+        font-size: 8rem;
+        bottom: 2rem;
+        left: 60px;
+    }
+    .studi-description{
+        padding: 60px 60px;
+    }
+    .studi-description p {
+        width: calc(100% - 1px);
+        font-size: 1.5rem;
+        font-weight: 100;
+        margin: 0;
+    }
+    .studi-description .btn{
+        position: absolute;
+        bottom: 20px;
+        right: 60px;
+        margin: 0;
+    }
+    
+    #vorteile .row div {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+    }
+    #vorteile .row div:nth-child(2){
+        margin: 0 5%;
+    }
+    .icon {
+        margin: auto;
+    }
+    
+    #magazine > div {
+        padding: 40px 60px;
+        background-size: auto 230px;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 60px) center;
+    }
+    #magazine > div:nth-child(1){
+        background-image: url('https://hvs.wortundbildverlag.de/01_ApothekenUmschau/pages/1.jpg');
+    }
+    #magazine > div:nth-child(2){
+        background-image: url('https://hvs.wortundbildverlag.de/04_SeniorenRatgeber/pages/1.jpg');
+    }
+    #magazine > div:nth-child(3){
+        background-image: url('https://hvs.wortundbildverlag.de/05_DiabetesRatgeber/pages/1.jpg');
+    }
+    #magazine > div:nth-child(4){
+        background-image: url('https://hvs.wortundbildverlag.de/02_BabyUndFamilie/pages/1.jpg');
+    }
+    #magazine > div img {
+        margin: 0 0 20px 0;
+    }
+    #magazine h2, #magazine p {
+        width: calc(100% - 200px);
+    }
+    #magazine .btn{
+        margin: 15px 200px 0 auto;
+    }
+    
+    #kontakt h1{
+        font-size: 4rem
+    }
+    #kontakt form{
+        max-width: 600px;
+        margin: auto;
+    }
+    
+    
+    footer {
+        text-align: right;
+        padding: 20px 60px 40px;
+    }
+    footer ul {
+        display: inline-block;
+    }
+    
+    footer li {
+        display: inline-block;
+        text-align: right;
+        margin: 10px 0;
+    }
+    
+    footer li:not(:first-child):before {
+        content: "|";
+        display: inline-block;
+        margin: 0 20px;
+        pointer-events: none;
+    }
+        
+    .btn{
+        width: 180px;
+        padding: 15px 20px;
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width:1000px){
+    a.closeOverlay{
+        right: calc(50vw - 450px + 10px);
+    }
+}
+
+@media screen and (min-width:1160px){
+    #toTop {
+        right: calc(50vw - 450px - 175px);
+        bottom: 40px;
+    }
+    #sticky:before{
+        content: '';
+        background-color: #fff;
+        width: calc(100% + 6px);
+        height: calc(100% + 20px);
+        display: block;
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        -webkit-transition: left 450ms;
+        transition: left 450ms;
+    }
+    #sticky.open:before{
+        left: 100%;
+    }
+    #sticky{
+        right: calc(50% - 550px);
+    }
+}
+
+
+
+@media screen and (width:800px) and (height:600px){
+    html {
+        font-size: 10px;
+    }
+}
+@media screen and (max-height:600px){
+    #sticky{
+        top: auto;
+        bottom: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
