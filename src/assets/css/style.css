@@ -50,10 +50,58 @@ img {
     text-align: center;
 }
 
+
+.side-bar {
+    background-color: coral;
+    position: fixed;
+    top: 50%;
+    left: auto;
+    right: 0;
+    max-width: 240px;
+    padding: 10px;
+    transform: translate(100%);
+    transition: transform 600ms;
+  }
+  .side-bar.show-contact {
+      transform: translate(0);
+  }
+  .side-bar.show-contact  .side-bar-cover{
+      transform: translate(100%);
+  }
+  .side-bar a {
+
+  }
+
+  .side-bar-title {
+      position: absolute;
+      width: 25px;
+      height: 60px;
+      top: 30px;
+      left:0;
+      transform: translate(-100%);
+      background-color: inherit;
+  }
+  .side-bar-title span{
+      display: block;
+      transform: translate(-18px,18px) rotate(-90deg);
+      transform-origin: center center;
+      width: 60px;
+      height: 25px;
+      text-align: center;
+  }
+  .side-bar-cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transition: transform 600ms;
+      transform: translate(0);
+      background-color: #fff;
+  }
 /* banner area */
 
 /* banner image */
-
 .banner-container {
     position: relative;
     max-height: 60vh;
@@ -99,8 +147,6 @@ img {
     margin-bottom: 10px;
 }
 
-
-
 /* banner description button */
 
 .description-button {
@@ -129,10 +175,21 @@ img {
     letter-spacing: 2px;
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:500px) {
+    .description-button {
+        white-space: normal !important;
+        word-wrap: break-word;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:769px)  {
+
+      
     body,
     html {
         font-size: 13px;
+        height: 2000px;
     }
     .navbar-brand .logo {
         width: 100px;
@@ -154,12 +211,16 @@ img {
         font-weight: 100;
         margin: 0;
     }
-}
-
-@media screen and (min-width:500px) {
-    .description-button {
-        white-space: normal !important;
-        word-wrap: break-word;
-        width: 200px;
+    .side-bar {
+        right: calc(50% - 375px);
+        background-color: #2377c0;
     }
 }
+
+@media screen and (min-width:992px) {
+    .side-bar {
+        right: calc(50% - 620px);
+        background-color: black;
+    }
+}
+
