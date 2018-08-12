@@ -324,6 +324,11 @@ img {
 	display: none;
 }
 
+#protectionLink {
+	color: black;
+	font-weight: bold;
+}
+
 footer {
 	padding: 0px 0px 40px;
 }

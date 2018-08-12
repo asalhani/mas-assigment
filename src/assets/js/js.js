@@ -20,8 +20,14 @@ $(document).ready(function () {
         $(this).attr("src", $(this).attr('src') + "?" + generateGuid());
     });
 
+    // open protection modal on link click
+    $("#protectionLink").click(function(e){
+        e.preventDefault();
+        $("#dataProtectionModal").modal();
+    });
+
+    // toggle (open/close) contact sidebar
     $(contactLink).click(function (e) {
-        console.log("atest");
         e.preventDefault();
         $(contactWrapper).toggleClass(classToToggle);
     });
