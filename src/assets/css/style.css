@@ -16,6 +16,7 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+
 .wrapper, .sections-wrapper {
     padding: 0;
 }
@@ -220,7 +221,6 @@ img {
 }
 
 .study-row{
-    background-color: #b21e22 !important;
     margin: 0;
     padding: 0;
 }
@@ -237,11 +237,33 @@ img {
 }
 
 #studies > div img {
-    display: block;
     margin: 0 auto 20px;
     width: auto;
     height: auto;
 }
+
+.study-row h2 {
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    
+    margin: 10px 0 5px 0;
+}
+
+.bold-p {
+    font-weight: 700;
+}
+
+.study-button {
+    width: 150px;
+}
+
+.study-poster {
+    margin: 0 auto 20px;
+    max-width: 300px;
+    height: auto;
+}
+
 
 @media screen and (min-width:500px) {
     .description-button {
@@ -291,6 +313,10 @@ img {
 
     #advantages{
         padding: 20px 60px;
+    }
+
+    .study-poster {
+       border: red 5px solid;
     }
     
 }
