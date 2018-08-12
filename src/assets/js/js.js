@@ -3,6 +3,7 @@ $(document).ready(function () {
     var contactWrapper = $("#contactWrapper");
     var contactLink = $("#contactLink");
     var classToToggle = "show-contact";
+    var notCachedClass = ".not-cached";
 
     // navigation links
     $('#menu li a').on('click', function (e) {
@@ -12,6 +13,11 @@ $(document).ready(function () {
             scrollTop: $($to).offset().top
         });
         $('header').removeClass('openMenu');
+    });
+
+    // append guid to prevent image cache
+    $(notCachedClass).each(function(index){
+        $(this).attr("src", $(this).attr('src') + "?" + generateGuid());
     });
 
     $(contactLink).click(function (e) {
@@ -69,3 +75,12 @@ $(document).ready(function () {
 function submitOrder() {
     $('#order-form').submit();
 }
+
+function generateGuid() {
+    function s4() {
+      return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+  }
