@@ -233,19 +233,59 @@
     <footer>
       <ul>
         <li>
-          <button> imprint</button>
+          <button type="button"  data-toggle="modal" data-target="#imprintModal"> imprint</button>
         </li>
         <li>
-          <button> data protection</button>
+          <button  type="button"  data-toggle="modal" data-target="#dataProtectionModal"> data protection</button>
         </li>
         <li>
-          <button>© Wort &amp; Bild Verlag</button>
+          <label>© Wort &amp; Bild Verlag</lable>
         </li>
       </ul>
     </footer>
   </div>
 
+  <!-- modals start-->
+  <!-- Modal -->
+  <div class="modal fade" id="imprintModal" tabindex="-1" role="dialog" aria-labelledby="imprintModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imprintModalTitle">Imprint</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="dataProtectionModal" tabindex="-1" role="dialog" aria-labelledby="dataProtectionModalTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="dataProtectionModalTitle">Data Protection</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- modals end-->
 
   <!--bootstrap scripts-->
   <script src="assets/lib/bootstrap/js/jquery.min.js"></script>
