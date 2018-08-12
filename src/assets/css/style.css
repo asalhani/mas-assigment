@@ -202,8 +202,7 @@ img {
 #advantages p{
     text-align: justify;
     font-weight: bold;
-    /* padding-left: 35px;
-    padding-right: 30px; */
+    padding: 0 20px 0 20px;
 }
 
 .icon{
@@ -223,6 +222,12 @@ img {
         white-space: normal !important;
         word-wrap: break-word;
         width: 200px;
+    }
+
+    #advantages p{
+        text-align: justify;
+        font-weight: bold;
+        padding: 0 30px 0 30px;
     }
 }
 
