@@ -4,8 +4,9 @@ $(document).ready(function () {
     var contactLink = $("#contactLink");
     var classToToggle = "show-contact";
 
-    $(contactLink).click(function () {
+    $(contactLink).click(function (e) {
         console.log("atest");
+        e.preventDefault();
         $(contactWrapper).toggleClass(classToToggle);
     });
 
