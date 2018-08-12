@@ -4,6 +4,16 @@ $(document).ready(function () {
     var contactLink = $("#contactLink");
     var classToToggle = "show-contact";
 
+    // navigation links
+    $('#menu li a').on('click', function (e) {
+        e.preventDefault();
+        var $to = this.getAttribute('href');
+        $('body, html').animate({
+            scrollTop: $($to).offset().top
+        });
+        $('header').removeClass('openMenu');
+    });
+
     $(contactLink).click(function (e) {
         console.log("atest");
         e.preventDefault();
@@ -38,7 +48,7 @@ $(document).ready(function () {
         var email = $("#email").val();
         var message = $("#message").val();
         var pledgeValue = $("#pledge").is(':checked');
-        
+
         if (pharmacy === '' ||
             name === '' ||
             email === '' ||
@@ -46,12 +56,12 @@ $(document).ready(function () {
             pledgeValue === false)
             return false;
 
-            $('#order-form').trigger("reset");
+        $('#order-form').trigger("reset");
 
-            $("#order-form").addClass("hide");
+        $("#order-form").addClass("hide");
 
-            // change button text to "submit
-            $("#btnShowForm").removeClass('hide');
+        // change button text to "submit
+        $("#btnShowForm").removeClass('hide');
 
     });
 });
