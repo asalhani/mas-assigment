@@ -7,6 +7,7 @@ html {
     font-family: theSans, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    height: 2000px;
 }
 
 body {
@@ -15,9 +16,13 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-.wrapper {
+.wrapper, .sections-wrapper {
     padding: 0;
 }
+.sections-wrapper{
+    border: #3891df 1px solid;
+}
+
 img {
     width: auto;
     height: auto;
@@ -175,6 +180,44 @@ img {
     letter-spacing: 2px;
 }
 
+#advantages{
+    margin-top: 30px;
+}
+
+#advantages h1{
+    font-weight: bold;
+    color: #2377c0;
+    font-size: 40px;
+    line-height: 1.0;
+}
+
+#advantages h2{
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    color: #b21e22;
+    margin: 10px 0 5px 0;
+}
+
+#advantages p{
+    text-align: justify;
+    font-weight: bold;
+    /* padding-left: 35px;
+    padding-right: 30px; */
+}
+
+.icon{
+    height: 80px;
+    display: block;
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
 @media screen and (min-width:500px) {
     .description-button {
         white-space: normal !important;
@@ -189,7 +232,6 @@ img {
     body,
     html {
         font-size: 13px;
-        height: 2000px;
     }
     .navbar-brand .logo {
         width: 100px;
@@ -215,6 +257,11 @@ img {
         right: calc(50% - 375px);
         background-color: #2377c0;
     }
+
+    #advantages{
+        padding: 20px 60px;
+    }
+    
 }
 
 @media screen and (min-width:992px) {

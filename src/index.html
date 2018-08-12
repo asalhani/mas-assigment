@@ -22,80 +22,137 @@
 
 <body>
   <div class="wrapper container">
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="http://disputebills.com">
-            <img class="logo" src="assets/images/logo.svg" alt="Dispute Bills">
-          </a>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://disputebills.com">
+              <img class="logo" src="assets/images/logo.svg" alt="Dispute Bills">
+            </a>
+          </div>
+          <div id="navbar2" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <a href="#">Action</a>
+                  </li>
+                  <li>
+                    <a href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a href="#">Something else here</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li>
+                    <a href="#">Separated link</a>
+                  </li>
+                  <li>
+                    <a href="#">One more separated link</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="navbar2" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li>
-                  <a href="#">Action</a>
-                </li>
-                <li>
-                  <a href="#">Another action</a>
-                </li>
-                <li>
-                  <a href="#">Something else here</a>
-                </li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li>
-                  <a href="#">Separated link</a>
-                </li>
-                <li>
-                  <a href="#">One more separated link</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+      </nav>
+    </header>
+    <div class="sections-wrapper">
+      <section id="banner">
+        <div class="banner-container container">
+          <h1>THAT RIGHTS</h1>
+          <img src="assets/images/main-banner.jpg">
         </div>
+        <div class="banner-description container">
+          <p>
+            It is very important to us to support you as a partner optimally in your daily pharmacy routine.
+          </p>
+          <p>
+            To help us do this, we commissioned a study from the renowned market research institute GfK, which examines the value of
+            Wort & Bild pharmacy customer magazines for your pharmacy.
+          </p>
+          <button type="button" class="btn pull-right description-button">Read this study completely</button>
+        </div>
+      </section>
+      <section id="advantages">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <h1>ADVANTAGES</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+
+            <img src="assets/images/kundenbindung.svg" alt="" class="icon">
+            <h2>Better customer loyalty</h2>
+            <p>
+              The readers of the Apotheken Umschau and all other titles of the Wort & Bild publishing house identify themselves with the
+              high-quality content that we offer them. The reading time of the booklet is 85 minutes *. During this time,
+              the interested reader learns a lot about the important achievements of pharmacists, he receives tips on how
+              to stay fit and healthy and which therapeutic measures are "state of the art".
+            </p>
+          </div>
+          <div class="col-xs-4">
+            <img src="assets/images/wachstum.svg" alt="" class="icon">
+            <h2>
+              Higher sales
+            </h2>
+            <p>
+              Who knows more, can make concrete decisions. The regular readers of the pharmacies Umschau appreciate the offers and services
+              of the pharmacy and therefore invest more for their health. While a non-reader spends an average of 20.40 EUR
+              per month in the pharmacy, the regular reader buys for 38.20 EUR **.
+            </p>
+          </div>
+          <div class="col-xs-4">
+            <img src="assets/images/qualitaet.svg" alt="" class="icon">
+            <h2>
+              Editorial quality
+            </h2>
+            <p>
+              At the Apotheken Umschau you can be sure that the contributions correspond to the highest journalistic level and that we
+              strengthen the local pharmacy on every page of our magazine. Our editorial quality, which is secured by almost
+              100 colleagues, makes us just as unique as our clear separation of editorial content and advertisements. We
+              are your partner in communication and customer loyalty.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- sticky button-->
+      <div id="contactWrapper" class="side-bar">
+        <!--<div class="side-bar show-contact">-->
+        <a href="#" class="side-bar-title" id="contactLink">
+          <span>Kontakt</span>
+        </a>
+        <p>Sie haben Fragen und wollen Kontakt zu uns aufnehmen? Sprechen Sie uns an.</p>
+        <p>Kostenfreie Rufnummer
+          <br>
+          <a href="tel:08008678670">0800 / 867 867 0 </a>
+          <br>
+          <a href="mailto:vertrieb@wortundbildverlag.de">vertrieb@wortundbildverlag.de</a>
+        </p>
+        <p>oder benutzen Sie unser
+          <a href="#kontakt">Kontaktformular</a>.</p>
+        <div class="side-bar-cover">&nbsp;</div>
       </div>
-    </nav>
-    <div class="banner-container container">
-      <h1>THAT RIGHTS</h1>
-      <img src="assets/images/main-banner.jpg">
-    </div>
-    <div class="banner-description container">
-      <p>
-        It is very important to us to support you as a partner optimally in your daily pharmacy routine.
-      </p>
-      <p>
-        To help us do this, we commissioned a study from the renowned market research institute GfK, which examines the value of
-        Wort & Bild pharmacy customer magazines for your pharmacy.
-      </p>
-      <button type="button" class="btn pull-right description-button">Read this study completely</button>
-    </div>
-    <!-- sticky button-->
-    <div class="side-bar"> <!--<div class="side-bar show-contact">-->
-      <a href="#" class="side-bar-title"><span>Kontakt</span></a>
-      <p>Sie haben Fragen und wollen Kontakt zu uns aufnehmen? Sprechen Sie uns an.</p>
-      <p>Kostenfreie Rufnummer<br>
-      <a href="tel:08008678670">0800 / 867 867 0 </a><br><a href="mailto:vertrieb@wortundbildverlag.de">vertrieb@wortundbildverlag.de</a></p>
-      <p>oder benutzen Sie unser <a href="#kontakt">Kontaktformular</a>.</p>
-      <div class="side-bar-cover">&nbsp;</div>
     </div>
   </div>
 
