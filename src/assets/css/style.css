@@ -215,7 +215,33 @@ img {
     margin-left: auto;
 }
 
+#studies {
+    padding: 40px 0 0 0;
+}
 
+.study-row{
+    background-color: #b21e22 !important;
+    margin: 0;
+    padding: 0;
+}
+
+#studies > div:nth-child(2n+1) {
+    background-color: #d8cbcb;
+}
+
+#studies > div {
+    padding: 40px 20px;
+    background-size: 0px;
+    background-repeat: no-repeat;
+   
+}
+
+#studies > div img {
+    display: block;
+    margin: 0 auto 20px;
+    width: auto;
+    height: auto;
+}
 
 @media screen and (min-width:500px) {
     .description-button {
