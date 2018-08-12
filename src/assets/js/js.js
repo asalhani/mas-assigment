@@ -15,6 +15,24 @@ $(document).ready(function () {
         $('header').removeClass('openMenu');
     });
 
+    // toggle (show/hide) toUp button
+    $(window).on('scroll',function(){
+        console.log(window.pageYOffset);
+        if (window.pageYOffset > 200 ) {
+            $('#toUp').css('opacity',1);
+        } else {
+            $('#toUp').css('opacity',0);
+        }
+    })
+
+    // toUp handler
+    $('#toUp').on('click',function(e){
+        e.preventDefault();
+        $('body, html').animate({
+            scrollTop : 0
+        });
+    });
+
     // append guid to prevent image cache
     $(notCachedClass).each(function(index){
         $(this).attr("src", $(this).attr('src') + "?" + generateGuid());

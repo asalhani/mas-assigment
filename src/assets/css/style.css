@@ -40,6 +40,26 @@ img {
 	height: auto;
 }
 
+#toUp {
+    display: block;
+    background-color: rgba(0,0,0,0.4);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 15px;
+    line-height: 0;
+    opacity: 0;
+    -webkit-transition: opacity 450ms;
+    transition: opacity 450ms;
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .navbar {
 	margin-bottom: 0;
 }
