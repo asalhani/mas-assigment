@@ -1,331 +1,443 @@
 * {
-    box-sizing: border-box;
-}
-body, html {
-    font-family: theSans, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    height: 2000px;
-}
-body {
-    max-width: 1100px;
-    margin: auto;
-    position: relative;
-    overflow-x: hidden;
-}
-.wrapper, .sections-wrapper {
-    padding: 0;
-}
-.sections-wrapper{
-    border: #3891df 1px solid;
-}
-img {
-    width: auto;
-    height: auto;
-}
-.navbar {
-    margin-bottom: 0;
-}
-.navbar-brand {
-    height: auto;
-}
-.navbar-default {
-    background-color: rgb(255, 255, 255);
-    border: rgb(255, 255, 255);
-    border-color: #E7E7E7;
-   /* background-color: aquamarine */
-}
-.navbar-brand .logo {
-    padding: 7px 15px;
-    width: 80px;
-}
-.navbar-default .navbar-nav>li>a {
-    color: #808080;
-    margin-top: 30px;
-}
-.navbar-default .navbar-collapse {
-    border-color: rgb(255, 255, 255);
-    text-align: center;
-}
-.side-bar {
-    background-color: coral;
-    position: fixed;
-    top: 50%;
-    left: auto;
-    right: 0;
-    max-width: 240px;
-    padding: 10px;
-    transform: translate(100%);
-    transition: transform 600ms;
-}
-.side-bar.show-contact {
-    transform: translate(0);
-}
-.side-bar.show-contact .side-bar-cover{
-    transform: translate(100%);
-}
-.side-bar a {
-}
-.side-bar-title {
-    position: absolute;
-    width: 25px;
-    height: 60px;
-    top: 30px;
-    left:0;
-    transform: translate(-100%);
-    background-color: inherit;
-}
-.side-bar-title span{
-    display: block;
-    transform: translate(-18px,18px) rotate(-90deg);
-    transform-origin: center center;
-    width: 60px;
-    height: 25px;
-    text-align: center;
-}
-.side-bar-cover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: transform 600ms;
-    transform: translate(0);
-    background-color: #fff;
-}
-/* banner area */
-/* banner image */
-.banner-container {
-    position: relative;
-    max-height: 60vh;
-    overflow: hidden;
-    margin: 0;
-    font-size: 0;
-    padding: 0;
-}
-.banner-container h1 {
-    font-size: 3rem;
-    position: absolute;
-    line-height: 1.1;
-    color: #2377c0;
-    bottom: 10px;
-    left: 20px;
-    width: 30%;
-    margin: 0;
-    z-index: 10;
-    font-weight: bold;
-}
-.banner-container img {
-    position: relative;
-    opacity: 0.8;
-    margin-top: -10%;
-    width: 100%;
-    height: auto;
-}
-/* banner description */
-.banner-description {
-    position: relative;
-    background-color: #3891df;
-    color: #ffffff;
-}
-/* specify margin of the 2nd <p> */
-.banner-description p:nth-of-type(n+2) {
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-/* banner description button */
-.description-button {
-    outline: none;
-    height: auto;
-    text-align: center;
-    width: 200px;
-    border-radius: 40px;
-    background: #fff;
-    border: 2px solid #1ECD97;
-    color: #1ECD97;
-    letter-spacing: 0.5px;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.25s ease;
-}
-.description-button:hover {
-    color: white;
-    background: #1ECD97;
-}
-.description-button:active {
-    letter-spacing: 2px;
-}
-#advantages{
-    margin-top: 30px;
-}
-#advantages h1{
-    font-weight: bold;
-    color: #2377c0;
-    font-size: 40px;
-    line-height: 1.0;
-}
-#advantages h2{
-    font-weight: bold;
-    text-align: center;
-    font-size: 16px;
-    color: #b21e22;
-    margin: 10px 0 5px 0;
-}
-#advantages p{
-    text-align: justify;
-    font-weight: bold;
-    padding: 0 20px 0 20px;
-}
-.icon{
-    height: 80px;
-    display: block;
-    width: auto;
-    margin-top: 30px;
-    margin-bottom: 0px;
-    margin-right: auto;
-    margin-left: auto;
-}
-#studies {
-    padding: 40px 0 0 0;
-}
-.study-row{
-    margin: 0;
-    padding: 0;
-}
-#studies > div:nth-child(2n+1) {
-    background-color: #d8cbcb;
-}
-#studies > div {
-    padding: 40px 20px;
-    background-size: 0px;
-    background-repeat: no-repeat;
-}
-#studies > div img {
-    margin: 0 auto 20px;
-    width: auto;
-    height: auto;
-}
-.study-row h2 {
-    font-weight: bold;
-    text-align: left;
-    font-size: 14px;
-    margin: 10px 0 5px 0;
-}
-.bold-p {
-    font-weight: 700;
-}
-.study-button {
-    width: 150px;
-}
-.study-poster {
-    margin: 0 auto 20px;
-    max-width: 300px;
-    height: auto;
-}
-#order {
-    background-color: #2377c0;
-    padding-bottom: 20px;
-    
-    
-}
-#order h1 {
-    color: #ffffff;
-    text-align: center;
-    font-size: 1.8rem;
-    line-height: 1.2;
-    margin: 0 10px 0 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+	box-sizing: border-box;
 }
 
-.my-btn{
-    width: 180px;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    background-color: #b0abc4;
-    border-radius: 12px;
+body,
+html {
+	font-family: theSans, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	height: 2000px;
+}
+
+body {
+	max-width: 1100px;
+	margin: auto;
+	position: relative;
+	overflow-x: hidden;
+}
+
+a,
+a:active,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.wrapper,
+.sections-wrapper {
+	padding: 0;
+}
+
+.sections-wrapper {
+	border: #3891df 1px solid;
+}
+
+img {
+	width: auto;
+	height: auto;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-brand {
+	height: auto;
+}
+
+.navbar-default {
+	background-color: rgb(255, 255, 255);
+	border: rgb(255, 255, 255);
+	border-color: #E7E7E7;
+	/* background-color: aquamarine */
+}
+
+.navbar-brand .logo {
+	padding: 7px 15px;
+	width: 80px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #808080;
+	margin-top: 30px;
+}
+
+.navbar-default .navbar-collapse {
+	border-color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+.side-bar {
+	background-color: coral;
+	position: fixed;
+	top: 50%;
+	left: auto;
+	right: 0;
+	max-width: 240px;
+	padding: 10px;
+	transform: translate(100%);
+	transition: transform 600ms;
+}
+
+.side-bar.show-contact {
+	transform: translate(0);
+}
+
+.side-bar.show-contact .side-bar-cover {
+	transform: translate(100%);
+}
+
+.side-bar a {}
+
+.side-bar-title {
+	position: absolute;
+	width: 25px;
+	height: 60px;
+	top: 30px;
+	left: 0;
+	transform: translate(-100%);
+	background-color: inherit;
+}
+
+.side-bar-title span {
+	display: block;
+	transform: translate(-18px, 18px) rotate(-90deg);
+	transform-origin: center center;
+	width: 60px;
+	height: 25px;
+	text-align: center;
+}
+
+.side-bar-cover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: transform 600ms;
+	transform: translate(0);
+	background-color: #fff;
+}
+
+
+/* banner area */
+
+
+/* banner image */
+
+.banner-container {
+	position: relative;
+	max-height: 60vh;
+	overflow: hidden;
+	margin: 0;
+	font-size: 0;
+	padding: 0;
+}
+
+.banner-container h1 {
+	font-size: 3rem;
+	position: absolute;
+	line-height: 1.1;
+	color: #2377c0;
+	bottom: 10px;
+	left: 20px;
+	width: 30%;
+	margin: 0;
+	z-index: 10;
+	font-weight: bold;
+}
+
+.banner-container img {
+	position: relative;
+	opacity: 0.8;
+	margin-top: -10%;
+	width: 100%;
+	height: auto;
+}
+
+
+/* banner description */
+
+.banner-description {
+	position: relative;
+	background-color: #3891df;
+	color: #ffffff;
+}
+
+
+/* specify margin of the 2nd <p> */
+
+.banner-description p:nth-of-type(n+2) {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+
+/* banner description button */
+
+.description-button {
+	outline: none;
+	height: auto;
+	text-align: center;
+	width: 200px;
+	border-radius: 40px;
+	background: #fff;
+	border: 2px solid #1ECD97;
+	color: #1ECD97;
+	letter-spacing: 0.5px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.25s ease;
+}
+
+.description-button:hover {
+	color: white;
+	background: #1ECD97;
+}
+
+.description-button:active {
+	letter-spacing: 2px;
+}
+
+#advantages {
+	margin-top: 30px;
+}
+
+#advantages h1 {
+	font-weight: bold;
+	color: #2377c0;
+	font-size: 40px;
+	line-height: 1.0;
+}
+
+#advantages h2 {
+	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
+	color: #b21e22;
+	margin: 10px 0 5px 0;
+}
+
+#advantages p {
+	text-align: justify;
+	font-weight: bold;
+	padding: 0 20px 0 20px;
+}
+
+.icon {
+	height: 80px;
+	display: block;
+	width: auto;
+	margin-top: 30px;
+	margin-bottom: 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#studies {
+	padding: 40px 0 0 0;
+}
+
+.study-row {
+	margin: 0;
+	padding: 0;
+}
+
+#studies>div:nth-child(2n+1) {
+	background-color: #d8cbcb;
+}
+
+#studies>div {
+	padding: 40px 20px;
+	background-size: 0px;
+	background-repeat: no-repeat;
+}
+
+#studies>div img {
+	margin: 0 auto 20px;
+	width: auto;
+	height: auto;
+}
+
+.study-row h2 {
+	font-weight: bold;
+	text-align: left;
+	font-size: 14px;
+	margin: 10px 0 5px 0;
+}
+
+.bold-p {
+	font-weight: 700;
+}
+
+.study-button {
+	width: 150px;
+}
+
+.study-poster {
+	margin: 0 auto 20px;
+	max-width: 300px;
+	height: auto;
+}
+
+#order {
+	background-color: #2377c0;
+	padding-bottom: 20px;
+}
+
+#order h1 {
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.8rem;
+	line-height: 1.2;
+	margin: 0 10px 0 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.my-btn {
+	width: 180px;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	background-color: #b0abc4;
+	border-radius: 12px;
 }
 
 #order-form {
-    max-width: 600px;
-    margin: 0 10px 0 10px;
+	max-width: 600px;
+	margin: 0 10px 0 10px;
 }
 
-#order-form label{
-    color: white;
+#order-form label {
+	color: white;
 }
 
 .hide {
-    display: none;
+	display: none;
+}
+
+footer {
+	padding: 0px 0px 40px;
+}
+
+footer li {
+	text-align: center;
+	margin: 10px;
+}
+
+footer a {}
+
+ol,
+ul {
+	list-style: none;
+}
+
+footer button {
+	background: none!important;
+	border: none;
+	padding: 0!important;
+	/*optional*/
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+footer button:hover {
+	text-decoration: underline;
 }
 
 @media screen and (min-width:500px) {
-    .description-button {
-        white-space: normal !important;
-        word-wrap: break-word;
-        width: 200px;
-   }
-    #advantages p{
-        text-align: justify;
-        font-weight: bold;
-        padding: 0 30px 0 30px;
-   }
+	.description-button {
+		white-space: normal !important;
+		word-wrap: break-word;
+		width: 200px;
+	}
+	#advantages p {
+		text-align: justify;
+		font-weight: bold;
+		padding: 0 30px 0 30px;
+	}
 }
+
 @media screen and (min-width:769px) {
-    body, html {
-        font-size: 13px;
-   }
-    .navbar-brand .logo {
-        width: 100px;
-   }
-    .banner-container img {
-        margin-top: -10%;
-   }
-    .banner-container h1 {
-        font-size: 5rem;
-        bottom: 2rem;
-        left: 60px;
-   }
-    .banner-description {
-        padding: 20px 60px;
-   }
-    .banner-description p {
-        width: calc(100% - 1px);
-        font-size: 1.5rem;
-        font-weight: 100;
-        margin: 0;
-   }
-    .side-bar {
-        right: calc(50% - 375px);
-        background-color: #2377c0;
-   }
-    #advantages{
-        padding: 20px 60px;
-   }
-    .study-poster {
-        border: red 5px solid;
-   }
-    #order h1 {
-        font-size: 4rem;
-        font-weight: 750;
-   }
-    #btnShowForm {
-        width: 180px;
-        padding: 15px 20px;
-        font-size: 1.7rem;
-   }
-   #order-form {
-    margin: 0 auto 0 auto;
+	body,
+	html {
+		font-size: 13px;
+	}
+	.navbar-brand .logo {
+		width: 100px;
+	}
+	.banner-container img {
+		margin-top: -10%;
+	}
+	.banner-container h1 {
+		font-size: 5rem;
+		bottom: 2rem;
+		left: 60px;
+	}
+	.banner-description {
+		padding: 20px 60px;
+	}
+	.banner-description p {
+		width: calc(100% - 1px);
+		font-size: 1.5rem;
+		font-weight: 100;
+		margin: 0;
+	}
+	.side-bar {
+		right: calc(50% - 375px);
+		background-color: #2377c0;
+	}
+	#advantages {
+		padding: 20px 60px;
+	}
+	.study-poster {
+		border: red 5px solid;
+	}
+	#order h1 {
+		font-size: 4rem;
+		font-weight: 750;
+	}
+	#btnShowForm {
+		width: 180px;
+		padding: 15px 20px;
+		font-size: 1.7rem;
+	}
+	#order-form {
+		margin: 0 auto 0 auto;
+	}
+	footer {
+		text-align: right;
+		padding: 20px 60px 40px;
+	}
+	footer ul {
+		display: inline-block;
+	}
+	footer li {
+		display: inline-block;
+		text-align: right;
+		margin: 10px 0;
+	}
+	footer li:not(:first-child):before {
+		content: "|";
+		display: inline-block;
+		margin: 0 20px;
+		pointer-events: none;
+	}
 }
-}
+
 @media screen and (min-width:992px) {
-    .side-bar {
-        right: calc(50% - 620px);
-        background-color: black;
-   }
+	.side-bar {
+		right: calc(50% - 620px);
+		background-color: black;
+	}
 }
