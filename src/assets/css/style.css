@@ -1,17 +1,12 @@
-* {
-	box-sizing: border-box;
-}
+
 
 body,
 html {
-	font-family: theSans, sans-serif;
 	line-height: 1.5;
 }
 
 body {
 	margin: auto;
-	position: relative;
-	overflow-x: hidden;
 }
 
 a,
@@ -43,23 +38,22 @@ img {
 }
 
 #toUp {
-	display: block;
 	background-color: rgba(0, 0, 0, 0.4);
-	width: 35px;
-	height: 35px;
-	border-radius: 50%;
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
+	border-radius: 50%;
+	display: block;
+	bottom: 25px;
+	right: 15px;
+	height: 35px;
+	font-size: 26px;
 	text-align: center;
-	font-size: 24px;
 	padding-top: 15px;
+	opacity: 3;
+	width: 35px;
 	line-height: 0;
-	opacity: 0;
-	-webkit-transition: opacity 450ms;
-	transition: opacity 450ms;
 	text-decoration: none;
-	color: #ffffff;
+	transition: opacity 350ms;
+	color: #fff;
 }
 
 .navbar {
@@ -93,18 +87,18 @@ img {
 }
 
 .side-bar {
-	background: #2377c0;
-	color: #fff;
 	border: 3px #fff solid;
+	color: #fff;
+	top: 50%;
 	border-right: none;
 	border-radius: 0px 0 0 10px;
 	position: fixed;
-	top: 50%;
-	left: auto;
 	right: 0;
-	max-width: 240px;
+	left: auto;
+	background: #2377c0;
 	padding: 10px;
 	transform: translate(100%);
+	max-width: 240px;
 	transition: transform 600ms;
 }
 
@@ -132,15 +126,13 @@ img {
 
 .side-bar-title {
 	text-align: center;
-	background-color: inherit;
-	/* box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5); */
-	border: 3px #fff solid;
+	border: 2.5px #fff solid;
 	border-right: none;
 	border-radius: 10px 0 0 10px;
 	cursor: pointer;
 	position: absolute;
-	width: 41px;
-	height: 75px;
+	width: 35px;
+	height: 70px;
 	top: 30px;
 	left: 0;
 	transform: translate(-100%, -33px);
@@ -167,12 +159,6 @@ img {
 	background-color: #fff;
 }
 
-
-/* banner area */
-
-
-/* banner image */
-
 .banner-container {
 	position: relative;
 	max-height: 60vh;
@@ -183,17 +169,21 @@ img {
 }
 
 .banner-container h1 {
-	font-size: 3rem;
-	position: absolute;
 	line-height: 1.1;
 	color: #2377c0;
-	bottom: 10px;
+	font-size: 3rem;
 	left: 40px;
+	position: absolute;
 	width: 30%;
+	bottom: 10px;
 	margin: 0;
 	z-index: 10;
 	font-weight: bold;
-	text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff, -2px -2px #ffffff, 2px 2px #ffffff, -2px 2px #ffffff, 2px -2px #ffffff;
+	text-shadow: -2px 0
+	 #ffffff, 0 2px #ffffff, 2px 0 
+	 #ffffff, 0 -2px #ffffff, -2px -2px 
+	 #ffffff, 2px 2px #ffffff, -2px 2px #ffffff, 
+	 2px -2px #ffffff;
 }
 
 .banner-container img {
@@ -209,7 +199,7 @@ img {
 
 .banner-description {
 	position: relative;
-	background-color: #3891df;
+	background-color: #2377c0;
 	color: #ffffff;
 	padding: 20px;
 }
@@ -245,10 +235,6 @@ img {
 .description-button:hover {
 	color: white;
 	background: #2377c0	;
-}
-
-.description-button:active {
-	/* letter-spacing: 0px; */
 }
 
 #advantages {
