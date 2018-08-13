@@ -1,8 +1,7 @@
-
-
 body,
 html {
 	line-height: 1.5;
+	font-size: 16px;
 }
 
 body {
@@ -137,6 +136,7 @@ img {
 	left: 0;
 	transform: translate(-100%, -33px);
 	background-color: inherit;
+	font-size: 0.8rem;
 }
 
 .side-bar-title span {
@@ -225,7 +225,7 @@ img {
 	border: 2px solid #3891df	;
 	color: #000000;
 	letter-spacing: 0.5px;
-	font-size: 12px;
+	font-size: 0.8rem;
 	font-weight: bold;
 	cursor: pointer;
 	transition: all 0.25s ease;
@@ -244,14 +244,14 @@ img {
 #advantages h1 {
 	font-weight: bold;
 	color: #2377c0;
-	font-size: 40px;
+	font-size: 2.5rem;
 	line-height: 1.0;
 }
 
 #advantages h2 {
 	font-weight: bold;
 	text-align: center;
-	font-size: 16px;
+	font-size: 1rem;
 	color: #b21e22;
 	margin: 10px 0 5px 0;
 }
@@ -300,7 +300,7 @@ img {
 .study-row h2 {
 	font-weight: bold;
 	text-align: left;
-	font-size: 14px;
+	font-size: 0.8rem;
 	margin: 10px 0 5px 0;
 }
 
@@ -340,11 +340,13 @@ img {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 0.8rem;
     background: #fff;
     border-radius: 12px;
 }
-
+#btnShowForm {
+	font-size: 1.4rem;
+}
 #order-form {
 	max-width: 600px;
 	margin: 0 10px 0 10px;
@@ -394,31 +396,26 @@ footer button:hover {
 .modal-title{
 	font-weight: bold;
 }
+.study-button {
+	float: none !important;
+	display: block;
+	margin: auto;
+}
+
 /* DEFAULT ::::::
 
 Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-	body,
-	html {
-		font-size: 10px;
-	}
-
-	.banner-description {
-		padding:0;
-	}
+	
 } 
 
 
 /* Extra Small Devices, Phones */
 
 @media only screen and (min-width: 480px) {
-	body,
-	html {
-		font-size: 10px;
-	}
 	.banner-container h1 {
 		font-size: 5rem;
-		bottom: 9rem;
+		/* bottom: 9rem; */
 		/* left: 125px; */
 		
 	}	
@@ -428,12 +425,15 @@ Custom, iPhone Retina */
 	.description-button {
 		white-space: normal !important;
 		word-wrap: break-word;
-		width: 200px;
+		width: 220px;
 	}
 	#advantages p {
 		text-align: justify;
 		font-weight: bold;
 		padding: 0 30px 0 30px;
+	}
+	.study-button {
+		float: right !important;
 	}
 }
 
@@ -443,7 +443,7 @@ Custom, iPhone Retina */
 @media only screen and (min-width: 768px) {
 	body,
 	html {
-		font-size: 12px;
+		font-size: 16px;
 	}
 	.navbar-brand .logo {
 		width: 100px;
@@ -453,13 +453,13 @@ Custom, iPhone Retina */
 	}
 	.banner-container h1 {
 		font-size: 5rem;
-		bottom: 5rem;
+		/* bottom: 5rem; */
 		/* left: 63px; */
 	}
 	
 	.banner-description p {
 		width: calc(100% - 1px);
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		font-weight: 100;
 		margin: 0;
 	}
@@ -479,7 +479,6 @@ Custom, iPhone Retina */
 	#btnShowForm {
 		width: 180px;
 		padding: 15px 20px;
-		font-size: 1.7rem;
 	}
 	#order-form {
 		margin: 0 auto 0 auto;
@@ -508,17 +507,13 @@ Custom, iPhone Retina */
 /* Medium Devices, Desktops */
 
 @media only screen and (min-width: 992px) {
-	body,
-	html {
-		font-size: 14px;
-	}
 	.side-bar {
 		right: calc(50% - 485px);
 	}
 
 	.banner-container h1 {
-		font-size: 6.5rem;
-		bottom: 2rem;
+		font-size: 6rem;
+		bottom: 1.5rem;
 		/* left: 94px; */
 		
 	}
@@ -528,10 +523,6 @@ Custom, iPhone Retina */
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
-	body,
-	html {
-		font-size: 14px;
-	}
 	.side-bar {
 		right: calc(50% - 585px);
 	}
