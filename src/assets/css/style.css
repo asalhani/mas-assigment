@@ -5,7 +5,7 @@
 body,
 html {
 	font-family: theSans, sans-serif;
-	font-size: 16px;
+	font-size: 13px;
 	line-height: 1.5;
 	height: 2000px;
 }
@@ -95,7 +95,7 @@ img {
 	color: #fff;
 	border: 3px #fff solid;
     border-right: none;
-    border-radius: 0 0 0 10px;	
+    border-radius: 0px 0 0 10px;	
 	position: fixed;
 	top: 50%;
 	left: auto;
@@ -129,23 +129,23 @@ img {
 .side-bar-title {
 	text-align: center;
 	background-color: inherit;
-    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5);
+    /* box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5); */
     border: 3px #fff solid;
     border-right: none;
-    border-radius: 10px 10px 0 10px;
+    border-radius: 10px 0 0 10px;
     cursor: pointer;
 	position: absolute;
 	width: 41px;
 	height: 75px;
 	top: 30px;
 	left: 0;
-	transform: translate(-100%);
+	transform: translate(-100%,-33px);
 	background-color: inherit;
 }
 
 .side-bar-title span {
 	display: block;
-	transform: translate(-18px, 18px) rotate(-90deg);
+	transform: translate(-12px, 21px) rotate(-90deg);
 	transform-origin: center center;
 	width: 60px;
 	height: 25px;
@@ -425,7 +425,7 @@ Custom, iPhone Retina
 @media only screen and (min-width : 768px) {
 body,
 	html {
-		font-size: 13px;
+		font-size: 16px;
 	}
 	.navbar-brand .logo {
 		width: 100px;
