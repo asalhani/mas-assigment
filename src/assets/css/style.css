@@ -188,7 +188,7 @@ img {
 	line-height: 1.1;
 	color: #2377c0;
 	bottom: 10px;
-	left: 20px;
+	left: 40px;
 	width: 30%;
 	margin: 0;
 	z-index: 10;
@@ -211,6 +211,7 @@ img {
 	position: relative;
 	background-color: #3891df;
 	color: #ffffff;
+	padding: 20px;
 }
 
 
@@ -229,7 +230,7 @@ img {
 	height: auto;
 	text-align: center;
 	width: 200px;
-	border-radius: 40px;
+	border-radius: 12px;
 	background: #fff;
 	border: 2px solid #3891df	;
 	color: #000000;
@@ -238,6 +239,7 @@ img {
 	font-weight: bold;
 	cursor: pointer;
 	transition: all 0.25s ease;
+	min-height: 35px;
 }
 
 .description-button:hover {
@@ -246,7 +248,7 @@ img {
 }
 
 .description-button:active {
-	letter-spacing: 2px;
+	/* letter-spacing: 0px; */
 }
 
 #advantages {
@@ -431,7 +433,7 @@ Custom, iPhone Retina */
 	.banner-container h1 {
 		font-size: 5rem;
 		bottom: 9rem;
-		left: 125px;
+		/* left: 125px; */
 		
 	}	
 	.banner-description {
@@ -466,7 +468,7 @@ Custom, iPhone Retina */
 	.banner-container h1 {
 		font-size: 5rem;
 		bottom: 5rem;
-		left: 63px;
+		/* left: 63px; */
 	}
 	
 	.banner-description p {
@@ -529,9 +531,9 @@ Custom, iPhone Retina */
 	}
 
 	.banner-container h1 {
-		font-size: 7rem;
-		bottom: 5rem;
-		left: 94px;
+		font-size: 6.5rem;
+		bottom: 2rem;
+		/* left: 94px; */
 		
 	}
 }
